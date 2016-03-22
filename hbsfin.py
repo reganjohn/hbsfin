@@ -2,16 +2,10 @@
 hbsfin : a module created to
 (1) help John Regan learn hbsfin concepts by coding them, and
 (2) to allow him to do computations more easily because he can't use Excel fast
-enough to have enough time to figure out the answers.
+    enough to have enough time to figure out the answers.
 '''
 
-import sys
 from math import log, exp
-try:
-    from scipy.stats import norm
-except ImportError:
-    print 'hbsfin requires scipy to work properly'
-    sys.exit()
 
 # WARNING: All numbers should be floats -> x = 1.0
 
