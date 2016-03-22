@@ -1,6 +1,6 @@
 '''
 hbsfin : a module created to
-(1) help John Regan learn FIN2 concepts by coding them, and
+(1) help John Regan learn hbsfin concepts by coding them, and
 (2) to allow him to do computations more easily because he can't use Excel fast
 enough to have enough time to figure out the answers.
 '''
@@ -47,12 +47,12 @@ class GK:
         yearsToExpiration], volatility=x, callPrice=y, putPrice=z)
 
     eg:
-        c = FIN2.GK([1.4565, 1.45, .01, .02, .3], volatility=.20)
+        c = hbsfin.GK([1.4565, 1.45, .01, .02, .3], volatility=.20)
         c.callPrice				# Returns the call price
         c.putPrice				# Returns the put price
         c.callDelta				# Returns the call delta
         c.putDelta				# Returns the put delta
-        c.callDelta2			# Returns the call dual delta
+        c.callDelta2			        # Returns the call dual delta
         c.putDelta2				# Returns the put dual delta
         c.callTheta				# Returns the call theta
         c.putTheta				# Returns the put theta
@@ -63,13 +63,13 @@ class GK:
         c.vega					# Returns the option vega
         c.gamma					# Returns the option gamma
 
-        c = FIN2.GK([1.4565, 1.45, .01, .02, .3], callPrice=0.0359)
+        c = hbsfin.GK([1.4565, 1.45, .01, .02, .3], callPrice=0.0359)
         c.impliedVolatility		# Returns the implied volatility from the call price
 
-        c = FIN2.GK([1.4565, 1.45, .01, .02, .3], putPrice=0.03)
+        c = hbsfin.GK([1.4565, 1.45, .01, .02, .3], putPrice=0.03)
         c.impliedVolatility		# Returns the implied volatility from the put price
 
-        c = FIN2.GK([1.4565, 1.45, .1, .2, .3], callPrice=0.0359, putPrice=0.03)
+        c = hbsfin.GK([1.4565, 1.45, .1, .2, .3], callPrice=0.0359, putPrice=0.03)
         c.putCallParity			# Returns the put-call parity
     '''
 
@@ -233,12 +233,12 @@ class BS:
             volatility=x, callPrice=y, putPrice=z)
 
     eg:
-        c = FIN2.BS([1.4565, 1.45, .01, .30], volatility=.20)
+        c = hbsfin.BS([1.4565, 1.45, .01, .30], volatility=.20)
         c.callPrice				# Returns the call price
         c.putPrice				# Returns the put price
         c.callDelta				# Returns the call delta
         c.putDelta				# Returns the put delta
-        c.callDelta2			# Returns the call dual delta
+        c.callDelta2		        	# Returns the call dual delta
         c.putDelta2				# Returns the put dual delta
         c.callTheta				# Returns the call theta
         c.putTheta				# Returns the put theta
@@ -247,13 +247,13 @@ class BS:
         c.vega					# Returns the option vega
         c.gamma					# Returns the option gamma
 
-        c = FIN2.BS([1.4565, 1.45, .01, .30], callPrice=0.0359)
+        c = hbsfin.BS([1.4565, 1.45, .01, .30], callPrice=0.0359)
         c.impliedVolatility		# Returns the implied volatility from the call price
 
-        c = FIN2.BS([1.4565, 1.45, .01, .30], putPrice=0.0306)
+        c = hbsfin.BS([1.4565, 1.45, .01, .30], putPrice=0.0306)
         c.impliedVolatility		# Returns the implied volatility from the put price
 
-        c = FIN2.BS([1.4565, 1.45, .01, .30], callPrice=0.0359, putPrice=0.0306)
+        c = hbsfin.BS([1.4565, 1.45, .01, .30], callPrice=0.0359, putPrice=0.0306)
         c.putCallParity			# Returns the put-call parity
         '''
 
@@ -391,12 +391,12 @@ class Me:
             yearsToExpiration], volatility=x, callPrice=y, putPrice=z)
 
     eg:
-        c = FIN2.Me([52, 50, 1, 1, 30], volatility=20)
+        c = hbsfin.Me([52, 50, 1, 1, 30], volatility=20)
         c.callPrice				# Returns the call price
         c.putPrice				# Returns the put price
         c.callDelta				# Returns the call delta
         c.putDelta				# Returns the put delta
-        c.callDelta2			# Returns the call dual delta
+        c.callDelta2			        # Returns the call dual delta
         c.putDelta2				# Returns the put dual delta
         c.callTheta				# Returns the call theta
         c.putTheta				# Returns the put theta
@@ -405,13 +405,13 @@ class Me:
         c.vega					# Returns the option vega
         c.gamma					# Returns the option gamma
 
-        c = FIN2.Me([52, 50, 1, 1, 30], callPrice=0.0359)
+        c = hbsfin.Me([52, 50, 1, 1, 30], callPrice=0.0359)
         c.impliedVolatility		# Returns the implied volatility from the call price
 
-        c = FIN2.Me([52, 50, 1, 1, 30], putPrice=0.0306)
+        c = hbsfin.Me([52, 50, 1, 1, 30], putPrice=0.0306)
         c.impliedVolatility		# Returns the implied volatility from the put price
 
-        c = FIN2.Me([52, 50, 1, 1, 30], callPrice=0.0359, putPrice=0.0306)
+        c = hbsfin.Me([52, 50, 1, 1, 30], callPrice=0.0359, putPrice=0.0306)
         c.putCallParity			# Returns the put-call parity
     '''
 
